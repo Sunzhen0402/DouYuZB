@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="CollectionHeaderView" customModule="DYZB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SMZ-dY-Fba">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="10"/>
+                    <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="dN3-uj-X3Y"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="颜值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t21-QG-RZb">
+                    <rect key="frame" x="35" y="23" width="27" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCY-CR-N3u">
+                    <rect key="frame" x="250" y="15" width="60" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="Spp-O3-rZT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="更多 &gt;">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="home_header_phone" translatesAutoresizingMaskIntoConstraints="NO" id="bBi-HB-XPf">
+                    <rect key="frame" x="10" y="20" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="624-sx-bXu"/>
+                        <constraint firstAttribute="height" constant="20" id="AKu-ws-CuD"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="QCY-CR-N3u" secondAttribute="bottom" constant="5" id="9NX-Nz-Kdx"/>
+                <constraint firstItem="SMZ-dY-Fba" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="HzF-7e-Y04"/>
+                <constraint firstItem="SMZ-dY-Fba" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="Ite-yf-pJv"/>
+                <constraint firstItem="t21-QG-RZb" firstAttribute="leading" secondItem="bBi-HB-XPf" secondAttribute="trailing" constant="5" id="J08-og-umr"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="SMZ-dY-Fba" secondAttribute="trailing" id="O5l-0Z-upy"/>
+                <constraint firstItem="bBi-HB-XPf" firstAttribute="top" secondItem="SMZ-dY-Fba" secondAttribute="bottom" constant="11" id="Phu-1Z-ED3"/>
+                <constraint firstAttribute="trailing" secondItem="QCY-CR-N3u" secondAttribute="trailing" constant="10" id="eDy-IF-PIN"/>
+                <constraint firstItem="t21-QG-RZb" firstAttribute="centerY" secondItem="bBi-HB-XPf" secondAttribute="centerY" id="fZQ-QW-xa9"/>
+                <constraint firstItem="bBi-HB-XPf" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="kGs-77-sc7"/>
+                <constraint firstItem="QCY-CR-N3u" firstAttribute="top" secondItem="SMZ-dY-Fba" secondAttribute="bottom" constant="5" id="zAZ-bF-jP4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="iconImageView" destination="bBi-HB-XPf" id="Xej-Ac-Jke"/>
+                <outlet property="moreBtn" destination="QCY-CR-N3u" id="kEe-P1-sBh"/>
+                <outlet property="titleLabel" destination="t21-QG-RZb" id="JZl-94-65w"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="154"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="home_header_phone" width="18" height="18"/>
+    </resources>
+</document>
